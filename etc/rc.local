@@ -1,0 +1,22 @@
+# Put your custom commands here that should be executed once
+# the system init finished. By default this file does nothing.
+
+. /root/variables.sh
+
+rm /tmp/notify.done # done only once on boot
+
+if [ -x $COORDINATES_SCRIPT ] ; then
+   $COORDINATES_SCRIPT
+fi
+
+cp /root/wireless.Modem /etc/config/wireless
+uci commit wireless
+wifi
+ifdown ${MODEM_INTERFACE}
+if [ ! -f ${MODEM_DEVICE} ] ; then
+#	usbreset "${MODEM_NAME}"
+	gcom -d ${MODEM_DEVICE}
+fi
+ifup \'${MODEM_INTERFACE}\'
+
+exit 0

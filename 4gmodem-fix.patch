@@ -1,0 +1,4 @@
+/usr/bin/4gmodem
+
+line 352                CT=$(uci -q -P /var/state/ get network.$SEC.connect_time)
+
