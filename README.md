@@ -1,3 +1,4 @@
+
 <div dir="ltr" style="text-align: left;" trbidi="on">
 В репозитории <a href="https://github.com/p1ne/openwrt-scripts">https://github.com/p1ne/openwrt-scripts</a> выложены мои скрипты для OpenWRT на роутере TP-Link MR3020/модеме Huawei E353 для использования в автомобиле для следующих задач<br />
 <br />
